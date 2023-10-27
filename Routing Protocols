@@ -1,0 +1,64 @@
+1. BGP (Border Gateway Protocol):
+Route Metric: BGP uses attributes such as AS-path, next-hop, and various path attributes to determine the best path to a destination.
+Path Selection: BGP uses a combination of path attributes and a BGP decision process to select the best route to a destination. The decision process takes into account attributes like AS path length, local preference, and more.
+Best Practices: Best practices for BGP include using route filters to control BGP updates, implementing route aggregation, and ensuring BGP route reflectors or confederations are used in large-scale networks.
+
+2) OSPF (Open Shortest Path First):
+Route Metric: OSPF uses a metric called the Cost, which is based on the bandwidth of the link. Lower cost links are preferred.
+Path Selection: OSPF calculates the shortest path tree using the Dijkstra algorithm and selects the path with the lowest cost to reach a destination.
+Best Practices: Best practices for OSPF include proper network design with areas and summarization, fine-tuning of OSPF costs, and utilizing authentication mechanisms to secure OSPF updates.
+
+3)RIP (Routing Information Protocol):
+Route Metric: RIP uses hop count as its metric, where paths with fewer hops are preferred.
+Path Selection: RIP selects the route with the fewest hops to the destination.
+Best Practices: Best practices for RIP include using route summarization to reduce routing table size, implementing split-horizon to prevent routing loops, and filtering routes to prevent unwanted route updates.
+
+4) IS-IS (Intermediate System to Intermediate System):
+Route Metric: IS-IS uses a metric based on link bandwidth, similar to OSPF.
+Path Selection: IS-IS calculates the shortest path tree and selects the path with the lowest metric.
+Best Practices: Best practices for IS-IS include proper network design with areas, using authentication, and optimizing the network with metrics.
+
+5) PIM (Protocol Independent Multicast):
+Route Metric: PIM doesn't use a route metric for path selection; it's a multicast routing protocol.
+Path Selection: PIM selects the best path based on the shortest path to the multicast source or RP (Rendezvous Point).
+Best Practices: Best practices for PIM include designing the multicast distribution tree effectively and optimizing multicast routing to minimize traffic replication.
+
+6) NHRP (Next Hop Resolution Protocol):
+Route Metric: NHRP doesn't use route metrics; it's used for dynamic mapping of private to public IP addresses in VPN scenarios.
+Path Selection: NHRP is used to find the optimal next-hop router for traffic exiting a VPN.
+Best Practices: Best practices for NHRP include ensuring that NHRP is properly configured in VPN deployments.
+
+7) EIGRP (Enhanced Interior Gateway Routing Protocol):
+Route Metric: EIGRP uses a composite metric that includes bandwidth, delay, reliability, and load. The K-values allow customization of the metric calculation.
+Path Selection: EIGRP selects the route with the lowest composite metric.
+Best Practices: Best practices for EIGRP include adjusting K-values to fine-tune metric calculation, using route summarization, and maintaining low convergence times.
+
+8) Babel:
+Route Metric: Babel uses a metric based on path cost, which includes link quality and bandwidth.
+Path Selection: Babel selects routes with the lowest cost.
+Best Practices: Babel is designed for simplicity and adaptability. Best practices involve configuring cost values and maintaining network stability.
+
+9)Sharf:
+Route Metric: The specific metrics used in Sharf may vary depending on the implementation.
+Path Selection: Sharf's path selection depends on the specific routing strategy and metric configuration.
+Best Practices: Best practices for Sharf depend on the network's requirements and the chosen Sharf implementation.
+
+10) PBR (Policy-Based Routing):
+Route Metric: PBR can use various metrics, including access lists, interface status, or other attributes to make routing decisions.
+Path Selection: PBR allows administrators to define specific conditions and policies for route selection.
+Best Practices: Best practices for PBR include careful policy design, efficient use of route maps, and monitoring to ensure policies are working as intended.
+
+11) BFD (Bidirectional Forwarding Detection):
+Route Metric: BFD is not a routing protocol but a mechanism for detecting network failures quickly.
+Path Selection: BFD is used to detect path failures and trigger route reconvergence in routing protocols.
+Best Practices: Best practices for BFD include using it in conjunction with routing protocols to detect failures rapidly and improve network stability.
+
+12) VRRP (Virtual Router Redundancy Protocol):
+Route Metric: VRRP does not use route metrics, as it focuses on providing router redundancy.
+Path Selection: VRRP ensures that one router is active, and the others are in standby mode. The active router processes traffic.
+Best Practices: Best practices for VRRP include configuring timers and priorities to ensure smooth failover and network resilience.
+
+13) Pathd:
+Route Metric: The specific metrics used in the "pathd" daemon would depend on the underlying routing or load balancing strategy.
+Path Selection: "pathd" likely serves as a routing or load balancing component, determining the path based on the configured strategy.
+Best Practices: Best practices for "pathd" would depend on its specific use case and configuration within the network.
